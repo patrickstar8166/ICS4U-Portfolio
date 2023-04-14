@@ -47,13 +47,15 @@ body{
     width: 4%; 
     margin-top: 0.2%; 
     text-align: left;
+    float: left;
 }
 
 #clock{
     font-size: 1em; 
-    width: 38%; 
+    width: 20%; 
     margin-top: 0.6%; 
-    text-align: center;   
+    text-align: right;   
+    float: left;
 }
 
 .icon{
@@ -71,10 +73,11 @@ body{
 }
 
 .navelem{
-    float: left;
+    float: right;
     font-size: 1.1em;
     text-align: left;
     margin-top: 0.4%;
+    margin-right: 40px;
 }
 
 .navelem a, .tutorials{

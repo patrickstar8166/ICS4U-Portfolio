@@ -1,5 +1,3 @@
-let a;
-
 function dateTime(){
 	let x = new Date();
 	let date = ('0' + (x.getMonth()+1)).slice(-2) + '/' + ('0' + x.getDate()).slice(-2) + '/'+ x.getFullYear();
@@ -25,8 +23,9 @@ function head(){
             <ul id="navbar">
                 <li class="navelem" id="logo"><a href="index.html"><i class="fa fa-code" style="font-size:2em;"></i></a></li>
                 <li class="navelem" id="clock"><a href="javascript:void(0)" id="datetime"></a></li>
-                <li class="navelem" style="width:12%;"><a href="index.html"><i class="icon fa fa-home"></i> Home</a></li>
-                <li class="dropdown navelem" style="width:17%;">
+                <li class="navelem" style="right:0;"><a href="about.html"><i class="icon fa fa-user-o"></i> About Me</a></li>
+                <li class="navelem"><a href="bibliography.html"><i class="icon fa fa-book"></i> Bibliography</a></li>
+                <li class="dropdown navelem">
                     <a href="javascript:void(0)" class="tutorials"><i class="icon fa fa-file-code-o"></i> Java <nobr>Tutorials <i class="fa fa-caret-down"></i></nobr></a>
                     <div class="dropdown-content"> 
                         <a href="oop.html">Intro to OOP</a>
@@ -37,8 +36,7 @@ function head(){
                         <a href="recursion.html">Recursion</a>
                     </div>
                 </li>
-                <li class="navelem" style="width:15%;"><a href="bibliography.html"><i class="icon fa fa-book"></i> Bibliography</a></li>
-                <li class="navelem" style="width:13%;"><a href="about.html"><i class="icon fa fa-user-o"></i> About Me</a></li>
+                <li class="navelem"><a href="index.html"><i class="icon fa fa-home"></i> Home</a></li>
             </ul>
         </div>`;
     document.getElementById("header").innerHTML = inner;
