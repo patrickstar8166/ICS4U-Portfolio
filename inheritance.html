@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>OOP: Inheritance</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body onload="head(); dateTime(); foot();">  
+    <header id="header" style="position:fixed;"></header>
+    
+    <h1 class="title">OOP: Inheritance</h1>
+    
+    <div class="text">
+        <h3><br>What is Inheritance?</h3>
+        <p>Inheritance is a key component of OOP that allows us to create a new class from an existing class. The new class that is created is known as the subclass or child class and the existing class from which the child class is created is known as superclass or parent class. A subclass will inherit all the public member data and methods of its parent class, and additional properties unique to the subclass may be added. Private methods of a superclass are not callable from the subclass. Note that all Java classes automatically inherit from the Object class.</p>
+
+        <h3><br>Is-A and Has-A Relationships</h3>
+        <p>A subclass is defined as having an is-a relationship with its superclass. In Java, a class can only extend one superclass, but more than one subclass can be derived from one superclass. A has-a relationship means a class has a data field.</p>
+
+        <h3><br>Overriding</h3>
+        <p>When a method in the subclass has the same name as a method in the parent class, the method in the subclass can override the method in the superclass by redefining the method (reworking what it does).</p>
+
+        <h3><br>Super Keyword</h3>
+        <p>This is used to call the method of the parent class from the child class. If a superclass constructor is used in the subclass, Java differentiates between the different constructors based on the number of parameters.</p>
+
+        <h3><br>This Keyword</h3>
+        <p>This is used to refer to the current class. If there is ambiguity between classes, the keyword can help do differentiate between class attributes or parameters with the same name.<br>Uses:</p>
+        <ol>
+            <li>As a constructor:</li>
+                <ul>
+                    <li>Used if a class has 2 or more constructors</li>
+                    <li>Works much like super keyword</li>
+                    <li>Ex. this()</li>
+                </ul>
+            <li>As a variable:</li>
+                <ul>
+                    <li>Used when a variable name is shared across classes (ex. x or y)</li>
+                    <li>Ex. this.variableName</li>
+                </ul>
+            <li>As a method:</li>
+                <ul>
+                    <li>Used when a method name is shared across classes</li>
+                    <li>Ex. this.methodName()</li>
+                </ul>
+            <li>As a parameter:</li>
+                <ul>
+                    <li>Used to passing a reference to the current object</li>
+                    <li>Ex. method(this, arguments)</li>
+                </ul>
+        </ol>
+
+        <h3><br>Instance vs. Local Variables</h3>
+        <p>Instance Variables:</p>
+        <ul>
+            <li>Declared inside the class but outside any methods</li>
+            <li>New instances of these variables are created every time a new object is created from the class</li>
+            <li>Every instance of a class will have the same types of variables contained within it, but what's stored in those variables will be different from one object to another</li>
+        </ul>
+        <p>Local Variables:</p>
+        <ul>
+            <li>found within a method and nowhere else</li>
+            <li>Only visible within the method</li>
+        </ul>
+        <p>Instance variables are hidden from other classes (even with inheritance). This is called encapsulation.</p>
+
+        <h3><br>Set/Get Methods</h3>
+        <p>Set (accessor) methods allow another class to view data stored in an instance variable. Get (mutator) methods allow another class to change data stored in an instance variable.<p>
+
+        <h3><br>Rules with Inheritance</h3>
+        <ul>
+            <li>If the superclass constructor is used it must be the first line in the constructor</li>
+            <li>No argument (default) constructor must always be defined in the superclass to avoid errors</li>
+            <li>Instance variables are to always be declared as private so that they are not accessible by the subclass directly. To access or change them, one needs to use set/get methods</li>
+        </ul>
+    </div>
+    
+    <footer id="footer"></footer>
+</body>
+</html>

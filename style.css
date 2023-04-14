@@ -1,0 +1,113 @@
+.title{
+    text-align: center;
+    padding: 12% 10% 4% 10%;
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: white;
+}
+
+body{
+    margin: 0;
+    font-family: Geneva, sans-serif;
+    width: 100vw;
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text{
+    padding: 0% 19%;
+    color: white;
+    font-size: 1.2em;
+}
+
+.back{
+    background-color: #000031;
+    opacity: 0.9;
+    width: 100vw;
+    height: 70px;
+    position: absolute;
+}
+
+.front{
+    width: 100vw;
+    height: 65px;
+    color: white;
+    position: absolute;
+}
+
+.footelem{
+    width: 32.5%; 
+    float: left;
+}
+
+#logo{
+    width: 4%; 
+    margin-top: 0.2%; 
+    text-align: left;
+}
+
+#clock{
+    font-size: 1em; 
+    width: 38%; 
+    margin-top: 0.6%; 
+    text-align: center;   
+}
+
+.icon{
+    font-size: 1.5em !important;   
+}
+
+#navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 2%;
+    width: 100%;
+}
+
+.navelem{
+    float: left;
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 0.4%;
+}
+
+.navelem a, .tutorials{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+.navelem a:not(.clock a):hover, .dropdown-content a:hover{
+    text-decoration: underline;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00254d;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

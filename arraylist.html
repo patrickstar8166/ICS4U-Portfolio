@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>ArrayLists</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body onload="head(); dateTime(); foot();">  
+    <header id="header" style="position:fixed;"></header>
+    
+    <h1 class="title">ArrayLists</h1>
+
+    <div class="text">
+        <h3><br>What are ArrayLists?</h3>
+        <p>The ArrayList is a dynamic array, meaning that it is resizable. This solves the issue with an array’s set size, but takes up more memory. The ArrayList implements the java.util.List&lt;E&gt; interface. ArrayLists can hold objects of a specified type, but not elements of primitive data type. The ArrayList keeps track of the list capacity and list size.</p>
+
+        <h3><br>ArrayList Syntax</h3>
+        <p>Declaration and initialization: ArrayList&lt;Type&gt; arrList = new ArrayList&lt;&gt;(); or ArrayList&lt;Type&gt; arrList = new ArrayList&lt;&gt;(int capacity); For ArrayLists without a specified size, the default size is 10.
+        <br><br>ArrayList methods: 
+        <uL>
+            <li>arrName.size(): Returns size of array as int</li>
+            <li>arrName.isEmpty(): Returns a boolean for if the ArrayList is empty or not</li>
+            <li>arrName.add(E obj): Adds element at the end of the ArrayList</li>
+            <li>arrName.add(int i, E obj): Adds element at index i</li>
+            <li>arrName.set(int i, E obj): Sets the element at index i to E</li>
+            <li>arrName.get(int i): Accesses the element at index i</li>
+            <li>arrName.remove(int i): Removes the element at index i</li>
+            <li>arrName.contains(E obj): Returns a boolean for if the ArrayList contains E or not</li>
+            <li>arrName.indexOf(E obj): Returns the index of E. If E is not present, returns -1</li>
+        </uL>
+        Although ArrayLists need to be declared as an object type, autoboxing/autounboxing occurs when there needs to be conversion from int to Integer and from double to Double. Thus, one does not need to use objects when implementing ArrayList methods with numbers.</p>
+
+        <h3><br>ArrayList Details</h3>
+        <p>An ArrayList automatically doubles in capacity when it runs out of space. It allocates a bigger array and copies all pre existing values into it. In addition, the compiler will throw IndexOutOfBoundsException like an array if the index is invalid.</p>
+    </div>
+    
+    <footer id="footer"></footer>
+</body>
+</html>
