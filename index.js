@@ -48,7 +48,7 @@ function foot(){
     	<div class="front">
 	        <h3 class="footelem" style="text-align:left; margin:1.6% 0% 0% 1%;">ICS4U Portfolio</h3>
 	        <h4 class="footelem" style="text-align:center; margin-top:1.7%;">@2023 by Patrick Bian</h4>
-	        <a class="footelem" href="mailto:patrick.bian@student.tdsb.on.ca" style="text-align:right; margin:1.7% 1% 0% 0%; color:white;"><i class="fa fa-envelope"></i>Email Me</a>
+	        <a class="footelem" href="mailto:patrick.bian@student.tdsb.on.ca" style="text-align:right; margin:1.7% 2% 0% 0%; color:white;"><i class="fa fa-envelope"></i>Email Me</a>
 	    </div>`   
     document.getElementById("footer").innerHTML = inner;
 }
