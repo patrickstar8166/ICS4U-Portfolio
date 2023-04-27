@@ -33,14 +33,22 @@ body{
 }
 
 .project{
-    display: inline-block;
     width: 25vw;
-    height: auto;
+    flex: 1;
     vertical-align: top;
     padding: 0.8%;
     text-align: center;
     background-color: #055C9D;
     margin: 20px;
+}
+
+.code{
+    margin: auto;
+    width: 40vw;
+    padding: 0.5%;
+    background-color: gray;
+    height: auto;
+    text-align: left;
 }
 
 .text{
