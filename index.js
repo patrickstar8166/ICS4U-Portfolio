@@ -29,7 +29,7 @@ function head(){
                     <a href="javascript:void(0)" class="tutorials"><i class="icon fa fa-file-code-o"></i> Java <nobr>Tutorials <i class="fa fa-caret-down"></i></nobr></a>
                     <div class="dropdown-content"> 
                         <a href="oop.html">Intro to OOP</a>
-                        <a href="inheritance.html">OOP: Inheritance</a>
+                        <a href="oop2.html">Advanced OOP</a>
                         <a href="arrays.html">Arrays</a>
                         <a href="arraylist.html">ArrayLists</a>
                         <a href="searchsort.html">Searching & Sorting</a>
