@@ -24,11 +24,11 @@
             <li>Quadratic time - O(n^2): When the running time increases by a square with the length of the input</li>
         </ul>
 
+        <h2><br>Searching</h2>
         <h3><br>Sequential Search</h3>
         <p>Searching is used for finding an element in a list. Sequential search scans the list and compares the target value to each element, until the target is found or the whole list is searched. It is the most basic searching algorithm and has a time complexity of O(n).</p>
 
-        <p style="text-decoration:underline;">Implementation:</p>
-        
+        <p class="underline">Implementation:</p>
         <div class="code">
             <pre>
 //search for the number 5 in the list {1, 2, 3, 10, 4, 5}
@@ -40,7 +40,106 @@ for (int i = 0; i < list.length; i++){
 }
             </pre>
         </div>
-            
+        
+        <h3><br>Binary Search</h3>
+        <p>Binary search searches the list by comparing the target element with the middle element of the list, then splitting it in half each time and searching the half that contains the target. This is called a divide and conquer algorithm. If the element is not found, the algorithm returns -1. Binary search is much faster than sequential search, but has limitations as it only works with sorted lists. The time complexity of binary search is O(log n).<br>Precondition: The elements in the list much be sorted (ascending or descending).</p>
+
+        <p class="underline">Recursive Implementation:</p>
+        <div class="code">
+            <pre>
+public int binarySearch(int[] arr, int left, int right, int value){
+    if (right < left) return -1;
+
+    int middle = (left+right)/2;
+
+    if (value == arr[middle]) 
+        return middle;
+    else if (value < arr[middle]) 
+        return binarySearch(arr, middle+1, right, value);
+    else 
+        return binarySearch(arr, left, middle-1, value);
+}
+            </pre>
+        </div>
+
+        <p class="underline">Iterative Implementation: </p>
+        <div class="code"> 
+            <pre>
+public int binarySearch(int[] arr, int left, int right, int value){
+    while(left <= right){
+        int middle = (left+right)/2;
+
+        if (value == arr[middle]) 
+            return middle;
+        else if (value < arr[middle]) 
+            right = middle-1;
+        else 
+            left = middle+1;
+    }
+}
+            </pre>
+        </div>
+
+        <h2><br>Sorting</h2>
+        <p>Sorting is the process of rearranging elements in a list in ascending or descending order. Some examples include sorting student numbers, age, or test scores. There are many different algorithms, but 3 most basic ones will be covered in this tutorial. For the purposes of the implementations in this tutorial, all lists are to be sorted in ascending order.</p>
+
+        <h3><br>Selection Sort</h3>
+        <p>Algorithm:<br>Let n begin at 0.</p>
+        <ol>
+            <li>Iterate from the n+1st element to the end of the array and find the smallest element</li>
+            <li>Swap that element with the nth element</li>
+            <li>Increment n by 1 and repeat step 1 and 2 until n is the index of the last element</li>
+        </ol>
+
+        <p class="underline">Implementation: </p>
+        <div class="code">
+            <pre>
+public void selectionSort(int[] arr){
+    int x = arr.length;
+
+    for (int i = 0; i < x-1; i++){
+        int minIndx = i;
+        for (int j = i+1; j < x; j++)
+            if (arr[j] < arr[minIndx])
+                minIndx = j;
+
+        int temp = arr[minIndx];
+        arr[minIndx] = arr[i];
+        arr[i] = temp;
+    }
+}
+            </pre>
+        </div>
+        <p>Time complexity: O(n^2)</p>
+
+        <h3><br>Insertion Sort</h3>
+        <p>Algorithm:<br>Let n begin at 1.</p>
+        <ol>
+            <li>Take the n+1st element and compare it to every element before it</li>
+            <li>While n+1st element is larger, swap it</li>
+            <li>Increment n by 1 and repeat step 1 and 2 until n is the index of the last element</li>
+        </ol>
+
+        <p class="underline">Implementation: </p>
+        <div class="code">
+            <pre>
+public void insertionSort(int[] arr){
+    int x = arr.length;
+
+    for (int i = 1; i < x; ++i) {
+        int temp = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;
+    }
+}
+            </pre>
+        </div>
+        <p>Time complexity: O(n^2)</p>
     </div>
     
     <footer id="footer"></footer>

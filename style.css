@@ -38,17 +38,23 @@ body{
     vertical-align: top;
     padding: 0.8%;
     text-align: center;
-    background-color: #055C9D;
+    background-color: #3E35BC;
     margin: 20px;
 }
 
 .code{
     margin: auto;
-    width: 40vw;
+    width: auto;
     padding: 0.5%;
-    background-color: gray;
-    height: auto;
+    background-color: #3E35BC;
     text-align: left;
+    font-size: 1.2em;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 .text{
