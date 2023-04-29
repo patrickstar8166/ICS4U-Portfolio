@@ -84,6 +84,19 @@ public class Pen{
         <p>Static methods are methods that belong to the class definition. They are not part of objects when an object is created, and thus there is only one of that method. Static methods can be run without creating an object of the class.</p>
         <p>Instance methods exist only when they are part of on object. Thus, an object needs to be created before they can be executed.</p>
 
+        <h3><br>Instance vs. Local Variables</h3>
+        <p>Instance Variables:</p>
+        <ul>
+            <li>Declared inside the class but outside any methods</li>
+            <li>New instances of these variables are created every time a new object is created from the class</li>
+            <li>Every instance of a class will have the same types of variables contained within it, but what's stored in those variables will be different from one object to another</li>
+        </ul>
+        <p>Local Variables:</p>
+        <ul>
+            <li>found within a method and nowhere else</li>
+            <li>Only visible within the method</li>
+        </ul>
+
         <h3><br>Accessing Variables and Methods</h3>
         <p>The variables and methods of an object are said to be the members of that object. These members can be accessed with dot notation. However, an object of the class needs to first be created. To do so, use the <span class="textCode">new</span> keyword and the specified parameters. Once an object is created, any public members can be accessed.</p>
         <p class="underline">Example:</p>
@@ -99,6 +112,10 @@ p2.hold();
 
         <h3><br>Programming Style</h3>
         <p>Everything in a Java program is brought together in the main or driver method, which contains the main method. The public keyword allows other classes to access methods in that class, while the private keyword doesn’t allow access to the method/variable in that class.</p>
+
+        <h3><br>Unified Modelling Language (UML)</h3>
+        <p>A UML is a modelling laguage used to demonstrate the design of a class. It contains the class name, variable names and types, and method names, parameters, and return types.</p>
+        <img src="images/uml.png">
     </div>
     
     <footer id="footer"></footer>
