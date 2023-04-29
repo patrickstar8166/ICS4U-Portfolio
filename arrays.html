@@ -16,7 +16,7 @@
     
     <div class="text">
         <h3>What are Arrays?</h3>
-        <p>Arrays are a block of consecutive memory locations that hold values of the same data type, with the individual locations being called elements. Rather than treating each element as a separate variable, the whole array gets one name, which makes code more efficient if there are multiple similar variables (ex. student1, student2...). <br><br>The specific elements in an array are referred to by its index, which is an int value from 0 to length-1. Arrays have fixed size and thus their length cannot be changed. Note that the Java interpreter checks the values of indices at runtime and throws ArrayIndexOutOfBoundsException if an index is not possible to access.<img src="images/array.png"></p>
+        <p>Arrays are a block of consecutive memory locations that hold values of the same data type, with the individual locations being called elements. Rather than treating each element as a separate variable, the whole array gets one name, which makes code more efficient if there are multiple similar variables (ex. student1, student2...). <br><br>The specific elements in an array are referred to by its index, which is an int value from 0 to length-1. Arrays have fixed size and thus their length cannot be changed. Note that the Java interpreter checks the values of indices at runtime and throws ArrayIndexOutOfBoundsException if an index is not possible to access.<img src="images/array.png" width="70%" height="auto"></p>
 
         <h3><br>Parallel Arrays and Syntax</h3>
         <p>Before use, arrays must be declared. The syntax used is <span class="textCode">anyType[] arrName;</span> Declaration only creates a reference set to null, and thus arrays must be initialized before use. Arrays are objects, and are thus declared with the new keyword. <br>
@@ -39,7 +39,7 @@ System.out.print(arr2[1]); //prints 0.2
         <br><br>Returning arrays from methods: <span class="textCode">public anyType[] method()</span></p>
 
         <h3><br>2D Arrays and Syntax</h3>
-        <p>2D arrays are in the form of a rectangular board. They are inherently an array of arrays. Each row is stored in a separate block of consecutive memory locations. Elements are accessed using the row then column (ex. board[r][c]). Like parallel arrays, row and column indices start at 0. <br><img src="images/2darray.png">
+        <p>2D arrays are in the form of a rectangular board. They are inherently an array of arrays. Each row is stored in a separate block of consecutive memory locations. Elements are accessed using the row then column (ex. board[r][c]). Like parallel arrays, row and column indices start at 0. <br><img src="images/2darray.png" width="70%" height="auto">
         <br><br>Declaration: <span class="textCode">anyType[][] arrName;</span>
         <br>Initialization:
             <ul>
@@ -49,30 +49,37 @@ System.out.print(arr2[1]); //prints 0.2
         arrName.length is number of rows, and arrName[n].length is length of the n-th row.</p>
 
         <h3><br>Traversing Arrays</h3>
-        <p>Parallel arrays: 
+        <p>Parallel arrays: </p>
+        <ul>
+            <li>Using a for loop: <span class="textCode">for (int i = 0; i < arr.length; i++) //process arr[i]</span></li>
+            <li>Using a for each loop:</li>
             <ul>
-                <li>Using a for loop: <span class="textCode">for (int i = 0; i < arr.length; i++) //process arr[i]</span></li>
-                <li>Using a for each loop:</li>
-                <ul>
-                    <li>Introduced in Java 5 and is convenient for traversing arrays</li>
-                    <li>Syntax: <span class="textCode">for (int i : arr)</span> - “for int i in arr”</li>
-                    <li>Downside is that elements cannot be changed</li>
-                </ul>
+                <li>Introduced in Java 5 and is convenient for traversing arrays</li>
+                <li>Syntax: <span class="textCode">for (int i : arr)</span> - “for int i in arr”</li>
+                <li>Downside is that elements cannot be changed</li>
             </ul>
-            2D arrays:
-            <ul>
-                <li>Using a nested for loop:</li>
-                <div class="code">
-                    <pre>
+        </ul>
+        <p>2D arrays:</p>
+        <ul>
+            <li>Using a nested for loop:</li>
+            <div class="code">
+                <pre>
 for (int i = 0; i < arr.length; i++){
     for (int j = 0; j < arr[i].length; j++){
         //process arr[i][j]
     } 
 }
-                    </pre>
-                </div>
-            </ul>
-        </p>
+                </pre>
+            </div>
+        </ul>
+        
+        <h2><br>Common Mistakes</h2>
+        <ol>
+            <li>Forgetting to declare the length</li>
+            <li>Forgetting that array indices start with 0</li>
+            <li>Tring to access array indices out of bounds</li>
+            <li>Switching the row an column order with 2D arrays</li>
+        </ol>
     </div>
     
     <footer id="footer"></footer>

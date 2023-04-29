@@ -22,7 +22,7 @@
         <h3><br>Class Hierarchy</h3>
         <p>The existing class is known as the superclass or parent class. The new class that is created is known as the subclass, child class, or the derived. A subclass will inherit all the public member data its parent class, and additional properties unique to the subclass may be added. Private methods of a superclass are not callable from the subclass. In Java, a class can only extend one superclass, but more than one subclass can be derived from one superclass.<br><br>
         A subclass is defined as having an is-a relationship with its superclass. A has-a relationship means a class has a data field. Any class higher on the hierarchy is a ancestor class, and any class lower on the hierarchy is known as a descendant class.</p>
-        <img src="images/hierarchy.png">
+        <img src="images/hierarchy.png" width="70%" height="auto">
 
         <h3><br>Overriding</h3>
         <p>When a method in the subclass has the same name as a method in the parent class, the method in the subclass can override the method in the superclass by redefining the method (reworking what it does).</p>
@@ -30,7 +30,7 @@
         <h3><br>Super Keyword</h3>
         <p>This is used to call the method of the parent class from the child class. If a superclass constructor is used in the subclass, Java differentiates between the different constructors based on the number of parameters.</p>
 
-        <h3><br>This Keyword</h3>
+        <h3><br>"this" Keyword</h3>
         <p>This is used to refer to the current class. If there is ambiguity between classes, the keyword can help do differentiate between class attributes or parameters with the same name.<br>Uses:</p>
         <ol>
             <li>As a constructor:</li>
@@ -90,12 +90,23 @@ public class GradStudent extends Student{
 
         <h2><br>Polymorphism</h2>
         <p>Polymorphism means many forms. It is the ability of a class to provide different implementations of a method, depending on the type of object that is passed.</p>
+        <p class="underline">Example:</p>
+        <div class="code">
+            <pre>
+//works because everyone “is a” Student
+Student s = new Student();
+Student g = new GradStudent();
+Student u = new UnderGrad();
+
+//does not work as not every student is a GradStudent
+            </pre>
+        </div>
 
         <h3><br>Static and Dynamic Binding</h3>
         <p>Binding is determining the memory addresses for jumps. Static binding is done at compile time, and dynamic is done at run time. An example is when a derived class object call a method in their parent class which calls a method that is overridden in the derived class. The parent class is compiled separately and before the derived classes are even written, and so the compiler cannot possibly know which address to use. Therefore, the address must be determined (bound) at run time.</p>
 
         <h3><br>Polymorphism Example</h3>
-        <p>Taking the Student class hierarchy from earlier, Student and GradStudent have their own calculateAverage() method that is overriden. Conider the following objects:</p>
+        <p>Taking the Student class hierarchy from earlier, Student and GradStudent have their own calculateAverage() method that is overriden. Consider the following objects:</p>
         <div class="code">
             <pre>
 Student g = new GradStudent();
@@ -147,6 +158,17 @@ public class Jazz implements Music{
 }
             </pre>
         </div>
+
+        <h2><br>Common Mistakes</h2>
+        <ol>
+            <li>Declaring a class as <span class="textCode">superclassName extends subclassName</span></li>
+            <li>Not putting the <span class="textCode">super()</span> constructor on the first line</li>
+            <li>Not using <span class="textCode">super.</span> when trying to access a overriden superclass method</li>
+            <li>Creating a subclass object with type superclass</li>
+            <li>Calling a method that does not exist with polymorphism</li>
+            <li>Forgetting to provide implementation for abstract methods</li>
+            <li>Extending an interface (instead of implements)</li>
+        </ol>
     </div>
     
     <footer id="footer"></footer>
