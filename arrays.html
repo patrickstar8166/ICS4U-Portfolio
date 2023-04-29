@@ -14,48 +14,62 @@
     <h1 class="title">Arrays</h1>
     
     <div class="text">
-        <h3><br>What are Arrays?</h3>
-        <p>Arrays are a block of consecutive memory locations that hold values of the same data type, with the individual locations being called elements. Rather than treating each element as a separate variable, the whole array gets one name, whcih makes code more efficient if there are multiple similar variables (ex. student1, student2...). The specific elements in an array are referred to by its index, which is an int value from 0 to length-1. All array elements can be accessed with the syntax arr[k], indicating the k-th index. The first element is a[0] and the n-th element is a[n-1].Arrays have fixed size and thus their length cannot be changed. Note that the Java interpreter checks the values of indices at runtime and throws ArrayIndexOutOfBoundsException if an index is not possible to access.</p>
+        <h3>What are Arrays?</h3>
+        <p>Arrays are a block of consecutive memory locations that hold values of the same data type, with the individual locations being called elements. Rather than treating each element as a separate variable, the whole array gets one name, which makes code more efficient if there are multiple similar variables (ex. student1, student2...). <br><br>The specific elements in an array are referred to by its index, which is an int value from 0 to length-1. Arrays have fixed size and thus their length cannot be changed. Note that the Java interpreter checks the values of indices at runtime and throws ArrayIndexOutOfBoundsException if an index is not possible to access.<img src="images/array.png"></p>
 
         <h3><br>Parallel Arrays and Syntax</h3>
-        <p>Arrays are objects, and are thus declared with the new keyword.
+        <p>Before use, arrays must be declared. The syntax used is <span class="textCode">anyType[] arrName;</span> Declaration only creates a reference set to null, and thus arrays must be initialized before use. Arrays are objects, and are thus declared with the new keyword. <br>
+        <br><br> Different ways of initialization: 
             <ul>
-                <li>Declaration: anyType[] arrName;</li>
-                <li>Initialization: arrName = new anyType[length];</li>
-            </ul>
-            Declaration only creates a reference set to null, and thus arrays must be initialized before use. <br><br> Different ways of initialization: 
-            <ul>
-                <li>No values: anyType[] arrName = new anyType[length];</li>
-                <li>Preset values: anyType[] arrName = {element, element};</li>
+                <li>No values: <span class="textCode">anyType[] arrName = new anyType[length];</span></li>
+                <li>Preset values: <span class="textCode">anyType[] arrName = {element, element, ...};</span></li>
             </ul>
         When arrays are initialized without values, all elements are set to default values of either 0 for numbers, false for booleans, or null for objects. The length of array is either given explicitly or comes from the length of the {...} initialization list. To access the length of an array, use arrName.length, which is a public field in an array object
-        <br><br>Passing arrays into methods: public void method(anyType[] arrName). The elements of the original array are not copies as with primitive data types, so they are accessible and mutable in the method’s code.
-        <br><br>Returning arrays from methods: public anyType[] method()</p>
+        <br><br>All array elements can be accessed with the syntax <span class="textCode">arr[k]</span>, indicating the k-th index. The first element is a[0] and the n-th element is a[n-1].</p>
+        <p class="underline">Example:</p>
+        <div class="code">
+            <pre>
+int[] arr1 = new int[5]; //array of size 5 with default values
+double[] arr2 = {0.1, 0.2, 0.3}
+System.out.print(arr2[1]); //prints 0.2
+            </pre>
+        </div>
+        <p><br><br>Passing arrays into methods: <span class="textCode">public void method(anyType[] arrName)</span>. The elements of the original array are not copies as with primitive data types, so they are accessible and mutable in the method’s code.
+        <br><br>Returning arrays from methods: <span class="textCode">public anyType[] method()</span></p>
 
         <h3><br>2D Arrays and Syntax</h3>
-        <p>2D arrays are in the form of a rectangular board. They are inherently an array of arrays. Each row is stored in a separate block of consecutive memory locations. Elements are accessed using the row then column (ex. board[r][c]). Like parallel arrays, row and column indices start at 0.
-        <br>Declaration: anyType[][] arrName;
+        <p>2D arrays are in the form of a rectangular board. They are inherently an array of arrays. Each row is stored in a separate block of consecutive memory locations. Elements are accessed using the row then column (ex. board[r][c]). Like parallel arrays, row and column indices start at 0. <br><img src="images/2darray.png">
+        <br><br>Declaration: <span class="textCode">anyType[][] arrName;</span>
         <br>Initialization:
             <ul>
-                <li>No values: arrName = new anyType[rows][columns];</li>
-                <li>Preset values: anyType[][] arrName = {{element, element}, {element, element}}</li>
+                <li>No values: <span class="textCode">arrName = new anyType[rows][columns];</span></li>
+                <li>Preset values: <span class="textCode">anyType[][] arrName = {{element, element}, {element, element}}</span></li>
             </ul>
         arrName.length is number of rows, and arrName[n].length is length of the n-th row.</p>
 
         <h3><br>Traversing Arrays</h3>
         <p>Parallel arrays: 
             <ul>
-                <li>Using a for loop: for (int i = 0; i < arr.length; i++) //process arr[i]</li>
+                <li>Using a for loop: <span class="textCode">for (int i = 0; i < arr.length; i++) //process arr[i]</span></li>
                 <li>Using a for each loop:</li>
                 <ul>
                     <li>Introduced in Java 5 and is convenient for traversing arrays</li>
-                    <li>Syntax: for (int i : arr) - “for int i in arr”</li>
+                    <li>Syntax: <span class="textCode">for (int i : arr)</span> - “for int i in arr”</li>
                     <li>Downside is that elements cannot be changed</li>
                 </ul>
             </ul>
             2D arrays:
             <ul>
-                <li>Using a nested for loop: for (int i = 0; i < arr.length; i++) for (int j = 0; j < arr[i].length; j++) //process arr[i][j]</li>
+                <li>Using a nested for loop:</li>
+                <div class="code">
+                    <pre>
+for (int i = 0; i < arr.length; i++){
+    for (int j = 0; j < arr[i].length; j++){
+        //process arr[i][j]
+    } 
+}
+                    </pre>
+                </div>
             </ul>
         </p>
     </div>

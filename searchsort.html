@@ -14,14 +14,14 @@
     <h1 class="title">Searching & Sorting</h1>
 
     <div class="text">
-        <h3><br>Time Complexity</h3>
+        <h3>Time Complexity</h3>
         <p>Time complexity is the amount of time an algorithm takes to run as a function of the length of input. It does not measure the total execution time of an algorithm, but gives information about the change in execution time when the number of operations changes.<br><br>The most common form is Big O Notation. The run time of an algorithm in terms of how quickly it grows relative to the input by defining the operations done on it. The notation is O[n], where O is the order of growth and n is the length of the input.<br><br>Common time complexities:</p>
         
         <ul>
             <li>Constant time - O(1): Not dependent on the input size n; runtime is always the same</li>
             <li>Linear time - O(n): Running time increases linearly with the length of input</li>
             <li>Logarithmic time - O(log n): When the algorithm reduces the size of the input data in each step</li>
-            <li>Quadratic time - O(n^2): When the running time increases by a square with the length of the input</li>
+            <li>Quadratic time - O(n<sup>2</sup>): When the running time increases by a square with the length of the input</li>
         </ul>
 
         <h2><br>Searching</h2>
@@ -42,7 +42,7 @@ for (int i = 0; i < list.length; i++){
         </div>
         
         <h3><br>Binary Search</h3>
-        <p>Binary search searches the list by comparing the target element with the middle element of the list, then splitting it in half each time and searching the half that contains the target. This is called a divide and conquer algorithm. If the element is not found, the algorithm returns -1. Binary search is much faster than sequential search, but has limitations as it only works with sorted lists. The time complexity of binary search is O(log n).<br>Precondition: The elements in the list much be sorted (ascending or descending).</p>
+        <p>Binary search searches the list by comparing the target element with the middle element of the list, then splitting it in half each time and searching the half that contains the target. This is called a divide and conquer algorithm. If the element is not found, the algorithm returns -1. Binary search is much faster than sequential search, but has limitations as it only works with sorted lists. The time complexity of binary search is O(log n).<br><br>Precondition: The elements in the list much be sorted (ascending or descending).</p>
 
         <p class="underline">Recursive Implementation:</p>
         <div class="code">
@@ -110,7 +110,7 @@ public void selectionSort(int[] arr){
 }
             </pre>
         </div>
-        <p>Time complexity: O(n^2)</p>
+        <p>Time complexity: O(n<sup>2</sup>)</p>
 
         <h3><br>Insertion Sort</h3>
         <p>Algorithm:<br>Let n begin at 1.</p>
@@ -139,7 +139,9 @@ public void insertionSort(int[] arr){
 }
             </pre>
         </div>
-        <p>Time complexity: O(n^2)</p>
+        <p>Time complexity: O(n<sup>2</sup>)</p>
+          
+        <iframe width="70%" height="500" src="https://drive.google.com/file/d/1ELd9h9AXkRcDlr57yf29iX8xMjLUWjZQ/preview" allow="autoplay"></iframe>
     </div>
     
     <footer id="footer"></footer>

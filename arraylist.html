@@ -14,24 +14,39 @@
     <h1 class="title">ArrayLists</h1>
 
     <div class="text">
-        <h3><br>What are ArrayLists?</h3>
+        <h3>What are ArrayLists?</h3>
         <p>The ArrayList is a dynamic array, meaning that it is resizable. This solves the issue with an array’s set size, but takes up more memory. The ArrayList implements the java.util.List&lt;E&gt; interface. ArrayLists can hold objects of a specified type, but not elements of primitive data type. The ArrayList keeps track of the list capacity and list size.</p>
 
         <h3><br>ArrayList Syntax</h3>
-        <p>Declaration and initialization: ArrayList&lt;Type&gt; arrList = new ArrayList&lt;&gt;(); or ArrayList&lt;Type&gt; arrList = new ArrayList&lt;&gt;(int capacity); For ArrayLists without a specified size, the default size is 10.
+        <p>Declaration and initialization: <span class="textCode">ArrayList&lt;Type&gt; arrList = new ArrayList&lt;Type&gt;();</span> or <nobr><span class="textCode">ArrayList&lt;Type&gt; arrList = new ArrayList&lt;Type&gt;(int capacity);</span></nobr><br>For ArrayLists without a specified size, the default size is 10.<br><br>ArrayList elements have indicies like arrays, but cannot be accessed with the array syntax. Iterating through an ArrayList uses a for or for-each loop.
         <br><br>ArrayList methods: 
         <uL>
-            <li>arrName.size(): Returns size of array as int</li>
-            <li>arrName.isEmpty(): Returns a boolean for if the ArrayList is empty or not</li>
-            <li>arrName.add(E obj): Adds element at the end of the ArrayList</li>
-            <li>arrName.add(int i, E obj): Adds element at index i</li>
-            <li>arrName.set(int i, E obj): Sets the element at index i to E</li>
-            <li>arrName.get(int i): Accesses the element at index i</li>
-            <li>arrName.remove(int i): Removes the element at index i</li>
-            <li>arrName.contains(E obj): Returns a boolean for if the ArrayList contains E or not</li>
-            <li>arrName.indexOf(E obj): Returns the index of E. If E is not present, returns -1</li>
+            <li><span class="textCode">arrName.size()</span>: Returns size of array as int</li>
+            <li><span class="textCode">arrName.isEmpty()</span>: Returns a boolean for if the ArrayList is empty or not</li>
+            <li><span class="textCode">arrName.add(E obj)</span>: Adds element at the end of the ArrayList</li>
+            <li><span class="textCode">arrName.add(int i, E obj)</span>: Adds element at index i</li>
+            <li><span class="textCode">arrName.set(int i, E obj)</span>: Sets the element at index i to E</li>
+            <li><span class="textCode">arrName.get(int i)</span>: Accesses the element at index i</li>
+            <li><span class="textCode">arrName.remove(int i)</span>: Removes the element at index i</li>
+            <li><span class="textCode">arrName.contains(E obj)</span>: Returns a boolean for if the ArrayList contains E or not</li>
+            <li><span class="textCode">arrName.indexOf(E obj)</span>: Returns the index of E. If E is not present, returns -1</li>
         </uL>
         Although ArrayLists need to be declared as an object type, autoboxing/autounboxing occurs when there needs to be conversion from int to Integer and from double to Double. Thus, one does not need to use objects when implementing ArrayList methods with numbers.</p>
+
+        <p class="underline">Example:</p>
+        <div class="code">
+            <pre>
+ArrayList&lt;Integer&gt; arrList = new ArrayList&lt;Integer&gt;(2);
+arrList.add(1);
+arrList.add(2); //list is now [1, 2]
+arrList.add(1, 5); //list is now [1, 5, 2]
+arrList.set(0, 0); //list is now [0, 5, 2]
+System.out.println(arrList.get(1)); //prints 5
+System.out.println(arrList.indexOf(2)); //prints 2
+System.out.println(arrList.size()); //prints 3
+arrList.remove(0); //list is now [5, 2]
+            </pre>
+        </div>
 
         <h3><br>ArrayList Details</h3>
         <p>An ArrayList automatically doubles in capacity when it runs out of space. It allocates a bigger array and copies all pre existing values into it. In addition, the compiler will throw IndexOutOfBoundsException like an array if the index is invalid.</p>

@@ -27,6 +27,12 @@ body{
     width: auto;
 }
 
+.textCode{
+    color:#35a5d1; 
+    font-family: monospace; 
+    font-size: 1.4em;
+}
+
 .hyperlink{
     color: white;
     text-decoration: none;
@@ -93,13 +99,17 @@ body{
 
 #clock{
     font-size: 1em; 
-    margin-top: 0.6%; 
+    margin-top: 0.8%; 
     text-align: right;   
     float: left;
 }
 
 .icon{
     font-size: 1.5em !important;   
+}
+
+.caption{
+    font-size: 0.8em;
 }
 
 #navbar{
@@ -153,4 +163,10 @@ body{
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media screen and (max-width: 995px) {
+    #clock{
+        display: none;
+    }
 }
