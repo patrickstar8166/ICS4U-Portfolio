@@ -34,6 +34,7 @@ function head(){
                         <a href="arraylist.html">ArrayLists</a>
                         <a href="searchsort.html">Searching & Sorting</a>
                         <a href="recursion.html">Recursion</a>
+                        <a href="final.html">Final Project</a>
                     </div>
                 </li>
                 <li class="navelem"><a href="index.html"><i class="icon fa fa-home"></i> Home</a></li>
